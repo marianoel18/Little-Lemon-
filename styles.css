@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    color: black;
+}
+
+header {
+    background-color: yellow;
+    padding: 20px;
+}
+
+footer {
+    background-color: yellow;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Homepage Specific Styles */
+.bio {
+    padding: 20px;
+}
+
+/* Menu Page Specific Styles */
+.menu {
+    padding: 20px;
+}
+
+/* Booking Page Specific Styles */
+.booking-form {
+    padding: 20px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="date"],
+.booking-form input[type="time"],
+.booking-form input[type="number"] {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.booking-form button {
+    background-color: black;
+    color: yellow;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: yellow;
+    padding: 20px;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
