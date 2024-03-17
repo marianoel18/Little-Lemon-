@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Lemon Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for reservation booking section */
+        .reservation-section {
+            display: none; /* Hide by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+
+        .reservation-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Home page content -->
+    <div class="container">
+        <h1>Welcome to Little Lemon Restaurant</h1>
+        <p>Discover a world of flavor with our delightful dishes...</p>
+    </div>
+
+    <!-- Reservation booking section -->
+    <div class="reservation-section" id="reservationSection">
+        <div class="reservation-form">
+            <h2>Book a Table</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br><br>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required><br><br>
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Show reservation section when scrolled down
+        window.onscroll = function() {
+            showReservationSection();
+        };
+
+        function showReservationSection() {
+            var reservationSection = document.getElementById("reservationSection");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                reservationSection.style.display = "block";
+            } else {
+                reservationSection.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
